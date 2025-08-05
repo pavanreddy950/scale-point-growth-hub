@@ -48,7 +48,7 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="service-card fade-in">
+            <div key={index} className="service-card group fade-in">
               <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
                 <service.icon className="h-8 w-8 text-primary" />
               </div>
