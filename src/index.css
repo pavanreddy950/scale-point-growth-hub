@@ -2,39 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Scale Point Design System - Professional Business Growth Theme */
 
 @layer base {
   :root {
+    /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
+    --foreground: 0 0% 5%;
+    
+    /* Green Brand Colors for Growth & Success */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 142 76% 45%;
+    --primary-dark: 142 76% 28%;
+    
+    /* Professional Black & Gray Tones */
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 210 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    
+    --accent: 142 30% 95%;
+    --accent-foreground: 142 76% 36%;
+    
+    /* Neutral UI Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+    
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 142 76% 36%;
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    
+    /* Business Growth Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 28%) 100%);
+    --gradient-success: linear-gradient(90deg, hsl(142 76% 36%) 0%, hsl(120 100% 25%) 100%);
+    
+    /* Professional Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(142 76% 36% / 0.1);
+    --shadow-medium: 0 8px 24px -4px hsl(142 76% 36% / 0.15);
+    --shadow-strong: 0 16px 40px -8px hsl(142 76% 36% / 0.25);
+    
+    /* Animation Curves */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -100,6 +118,45 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero-primary {
+    @apply bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-medium hover:shadow-strong;
+  }
+  
+  .btn-hero-secondary {
+    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  /* Service Card Styles */
+  .service-card {
+    @apply bg-card border border-border rounded-xl p-8 transition-all duration-300 hover:shadow-medium hover:-translate-y-1 group;
+  }
+  
+  /* Section Headings */
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-foreground mb-6 text-center;
+  }
+  
+  .section-subheading {
+    @apply text-xl md:text-2xl text-muted-foreground mb-12 text-center max-w-3xl mx-auto;
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+  }
+  
+  /* Smooth Animations */
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
   }
 }
