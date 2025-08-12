@@ -10,11 +10,11 @@
     --background: 0 0% 100%;
     --foreground: 0 0% 5%;
     
-    /* Green Brand Colors for Growth & Success */
-    --primary: 142 76% 36%;
+    /* Professional Blue Brand Colors */
+    --primary: 220 85% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 142 76% 45%;
-    --primary-dark: 142 76% 28%;
+    --primary-light: 220 85% 65%;
+    --primary-dark: 220 85% 45%;
     
     /* Professional Black & Gray Tones */
     --secondary: 0 0% 8%;
@@ -23,8 +23,8 @@
     --muted: 210 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
     
-    --accent: 142 30% 95%;
-    --accent-foreground: 142 76% 36%;
+    --accent: 220 30% 95%;
+    --accent-foreground: 220 85% 55%;
     
     /* Neutral UI Colors */
     --card: 0 0% 100%;
@@ -35,20 +35,20 @@
     
     --border: 210 20% 90%;
     --input: 210 20% 90%;
-    --ring: 142 76% 36%;
+    --ring: 220 85% 55%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     
     /* Business Growth Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 28%) 100%);
-    --gradient-success: linear-gradient(90deg, hsl(142 76% 36%) 0%, hsl(120 100% 25%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(220 85% 55%), hsl(220 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 85% 55%) 0%, hsl(220 85% 45%) 100%);
+    --gradient-success: linear-gradient(90deg, hsl(220 85% 55%) 0%, hsl(240 100% 35%) 100%);
     
     /* Professional Shadows */
-    --shadow-soft: 0 2px 8px -2px hsl(142 76% 36% / 0.1);
-    --shadow-medium: 0 8px 24px -4px hsl(142 76% 36% / 0.15);
-    --shadow-strong: 0 16px 40px -8px hsl(142 76% 36% / 0.25);
+    --shadow-soft: 0 2px 8px -2px hsl(220 85% 55% / 0.1);
+    --shadow-medium: 0 8px 24px -4px hsl(220 85% 55% / 0.15);
+    --shadow-strong: 0 16px 40px -8px hsl(220 85% 55% / 0.25);
     
     /* Animation Curves */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
