@@ -1,6 +1,11 @@
 import { Linkedin, MessageCircle, Instagram, ArrowUp } from 'lucide-react';
+import React, { useState } from 'react';
+import TermsOfService from './TermsOfService';
+import PrivacyPolicy from './PrivacyPolicy';
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  const [isTermsOpen, setIsTermsOpen] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const quickLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About Us', href: '#about' },
@@ -131,18 +136,18 @@ const Footer = () => {
               © 2025 Scale Point. All Rights Reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a
-                href="#privacy"
+              <button
+                onClick={() => setIsPrivacyOpen(true)}
                 className="text-secondary-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 Privacy Policy
-              </a>
-              <a
-                href="#terms"
+              </button>
+              <button
+                onClick={() => setIsTermsOpen(true)}
                 className="text-secondary-foreground/80 hover:text-primary transition-colors duration-200"
               >
                 Terms of Service
-              </a>
+              </button>
               <a
                 href="#contact"
                 className="text-secondary-foreground/80 hover:text-primary transition-colors duration-200"
@@ -153,6 +158,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      
+      {/* Popup Components */}
+      <TermsOfService 
+        isOpen={isTermsOpen} 
+        onClose={() => setIsTermsOpen(false)} 
+      />
+      <PrivacyPolicy 
+        isOpen={isPrivacyOpen} 
+        onClose={() => setIsPrivacyOpen(false)} 
+      />
     </footer>
   );
 };
